@@ -1,15 +1,16 @@
 
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { ThisDayWrapper, Top, Bottom } from './styles';
 import CurrentTime from './CurrentTime';
+import useWeather from '../../utils/useWeather.js';
 
 const ThisDay = () => {
+  const { data, isLoading } = useWeather("seoul");
+  const temperature = Math.round(data?.main.temp || 0);
+  const cityName = data?.name;
 
   let imageSrc = "./images/weatherIcons/";
   const [imgsrc, setImgsrc] = useState(imageSrc + "clear-sky.svg")
-  const [temperature, setTemperature] = useState(21)
-
-
 
   return (
     <ThisDayWrapper>
@@ -23,12 +24,10 @@ const ThisDay = () => {
       <Bottom>
         <CurrentTime />
         <div>
-          Seoul - KR
+          {cityName} - {data?.sys.country}
         </div>
       </Bottom>
-
     </ThisDayWrapper>
-
   )
 }
 
