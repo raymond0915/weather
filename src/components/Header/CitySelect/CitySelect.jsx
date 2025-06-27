@@ -11,16 +11,23 @@ const CitySelect = () => {
     console.log(newValue)
     navigate(`/${newValue?.value}`)
   }
+  const handleCreate = (inputValue) => {
+    console.log("New Option Created:", inputValue);
+  }
   return (
     <SelectWrapper>
       <CreatableSelect
+        isClearable
         options={cityOptions}
         onChange={handleChange}
-        defaultInputValue={null}
+        onCreateOption={handleCreate}
+        value={null}
 
         className='react-select-container'
         classNamePrefix='react-select'
       />
+
+
     </SelectWrapper>
   )
 }

@@ -54,7 +54,7 @@ export const SelectWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 20px;
-  z-index : 2;
+
   .react-select-container {
     width: 250px;
   }
