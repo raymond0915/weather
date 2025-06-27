@@ -5,6 +5,7 @@ import { ThisDayInfoWrapper, ImgWrapper } from './styles'
 import useWeather from '../../utils/useWeather.js';
 
 const nameInfo = ["Temperature", "Pressure", "Humidity", "Wind"];
+
 const imgInfo = [
   "./images/temperature.svg",
   "./images/pressure.svg",
@@ -28,17 +29,17 @@ const ThisDayInfo = () => {
   return (
     <ThisDayInfoWrapper>
       <div>
-        {imgInfo.map((img, index) => {
+        {imgInfo.map((img, index) => (
           <ImgWrapper key={index}>
             <img src={img} />
           </ImgWrapper>
-        })}
+        ))}
       </div>
       <div>
         {
-          nameInfo.map((info, index) => {
+          nameInfo.map((info, index) => (
             <h2 key={index}>{info}</h2>
-          })
+          ))
         }
       </div>
       <div>
@@ -47,7 +48,6 @@ const ThisDayInfo = () => {
         ))}
       </div>
     </ThisDayInfoWrapper >
-
   )
 }
 
