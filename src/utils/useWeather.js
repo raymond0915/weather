@@ -15,9 +15,8 @@ const useWeather = (city = "Seoul") => {
     queryKey: ["weather", city],
     // 데이터를 가져올 비동기 함수
     queryFn: () => getWeather(city),
-    // 데이터를 상태로 유지할 시간(ms)
-    staleTime: 1000 * 60 * 5
   });
+
   return {
     ...rest,
     data,
