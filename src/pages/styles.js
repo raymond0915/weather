@@ -16,7 +16,7 @@ export const BackgroundGradient = styled.div`
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
-  z-index: -1;
+  z-index: 1;
 `;
 
 export const MainContent = styled(Container)`

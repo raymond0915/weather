@@ -5,6 +5,7 @@ import CurrentTime from './CurrentTime';
 import useWeather from '../../utils/useWeather.js';
 
 const ThisDay = () => {
+
   const { data, isLoading } = useWeather("Seoul");
 
   const temperature = Math.round(data?.main.temp || 0);

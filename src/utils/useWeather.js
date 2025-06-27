@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 const getWeather = (city = "Seoul") => {
   const weather = openWeather.getCurrentWeatherByCityName({
-    cityName: "Seoul",
+    cityName: city,
     countryCode: "KR",
     units: 'metric',
   })
@@ -22,5 +22,6 @@ const useWeather = (city = "Seoul") => {
     data,
   };
 }
+
 
 export default useWeather;
