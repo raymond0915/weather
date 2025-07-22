@@ -13,6 +13,8 @@ const getWeatherIcon = (icon) => {
       return "snow.svg"
     case "Thunderstorm":
       return "thunderstorm.svg"
+    default:
+      return "clear-sky.svg";
   }
 }
 
