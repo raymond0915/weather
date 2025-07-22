@@ -6,7 +6,7 @@ import { useWeatherForecast } from '../../utils/useWeatherForecast'
 
 
 const AllDays = () => {
-  const { days, isLoading } = useWeatherForecast("Seoul")
+  const { days, _ } = useWeatherForecast("Seoul")
   return (
     <AllDaysWrapper>
       {days.map((day) => (
