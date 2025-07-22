@@ -31,7 +31,7 @@ const ThisDayInfo = () => {
       <div>
         {imgInfo.map((img, index) => (
           <ImgWrapper key={index}>
-            <img src={img} />
+            <img src={img} alt="" />
           </ImgWrapper>
         ))}
       </div>
